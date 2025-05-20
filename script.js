@@ -3,24 +3,22 @@ document.addEventListener('DOMContentLoaded', function () {
   const ervaringen = JSON.parse(localStorage.getItem('ervaringen')) || [];
   const emotieTekstElement = document.querySelector('#emotietekstp');
   const emotieTekstElementtekst = document.querySelector('.emotietekst');
-  const ervaringTekstElement = document.querySelector('#ervaringtekstp'); // Select the element with ID 'ervaringtekstp'
   const ervaringTekstElementtekst = document.querySelector('.ervaringtekst');
   const storedEmotie = localStorage.getItem('emotie');
-  const storedErvaring = localStorage.getItem('ervaring'); // Retrieve stored ervaring
+  const storedErvaring = localStorage.getItem('ervaring');
 
-  // Display stored emotie in 'emotietekstp' if it exists
+  
   if (storedEmotie && emotieTekstElement) {
     emotieTekstElement.textContent = storedEmotie;
     emotieTekstElementtekst.style.display = 'block';
   }
 
-  // Display stored ervaring in 'ervaringtekstp' if it exists
   if (storedErvaring && ervaringTekstElement) {
     ervaringTekstElement.textContent = storedErvaring;
     ervaringTekstElementtekst.style.display = 'block';
   }
 
-  // Display stored ervaringen
+
   ervaringen.forEach(item => {
     voegErvaringToeAanPagina(item.emotie, item.ervaring);
   });
@@ -34,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-const emotieDiv = document.querySelector('.emotie'); // Select the .emotie div
+const emotieDiv = document.querySelector('.emotie'); 
 const ervaringDiv = document.querySelector('.ervaring');
 const buttonDiv = document.querySelector('.button');
 const naamDiv = document.querySelector('.naam');
@@ -51,7 +49,7 @@ document.getElementById('plaatsenButton').addEventListener('click', function (ev
   const ervaringInput = document.querySelector('#ervaringinput');
   const emotieTekstElement = document.querySelector('#emotietekstp');
   const emotieTekstElementtekst = document.querySelector('.emotietekst');
-  const ervaringTekstElement = document.querySelector('#ervaringtekstp'); // Select the element with ID 'ervaringtekstp'
+  const ervaringTekstElement = document.querySelector('#ervaringtekstp'); 
 
   if (emotieInput.value.trim() === '') {
     alert('Vul een emotie in!');
@@ -66,35 +64,29 @@ document.getElementById('plaatsenButton').addEventListener('click', function (ev
   const emotie = emotieInput.value.trim();
   const ervaring = ervaringInput.value.trim();
 
-  // Update the content of the 'emotietekstp' element
+ 
   if (emotieTekstElement) {
     emotieTekstElement.textContent = emotie;
-    emotieTekstElementtekst.style.display = 'block'; // Ensure the element is visible
+    emotieTekstElementtekst.style.display = 'block'; 
   }
 
-  // Update the content of the 'ervaringtekstp' element
+
   if (ervaringTekstElement) {
     ervaringTekstElement.textContent = ervaring;
-    ervaringTekstElement.style.display = 'block'; // Ensure the element is visible
+    ervaringTekstElement.style.display = 'block'; 
   }
 
-  // Store emotie in local storage
   localStorage.setItem('emotie', emotie);
 
-  // Store ervaring in local storage
+
   localStorage.setItem('ervaring', ervaring);
 
-  // Store ervaring in the ervaringen array in local storage
   const ervaringen = JSON.parse(localStorage.getItem('ervaringen')) || [];
   ervaringen.push({ emotie, ervaring });
   localStorage.setItem('ervaringen', JSON.stringify(ervaringen));
 
-  // Immediately display the new ervaring on the page
   voegErvaringToeAanPagina(emotie, ervaring);
 
-  // Make the .emotie and .ervaring elements disappear
-
-  // Clear input fields
   emotieInput.value = '';
   ervaringInput.value = '';
 
