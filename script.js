@@ -150,5 +150,4 @@ function voegReactieToeAanPagina(naam, reactie) {
   reactielijstContainer.style.display = 'flex';
 }
 
-localStorage.clear();
 
