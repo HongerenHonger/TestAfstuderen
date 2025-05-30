@@ -1,10 +1,3 @@
-/* Algemene stijlen (toegepast op alle schermgroottes) */
-
-@font-face {
-  font-family: "Futuramedium";
-  src: url(fonts/GraphikSemibold.ttf) format("truetype");
-}
-
 @font-face {
   font-family: "GraphikBlack";
   src: url(fonts/GraphikSemibold.ttf) format("truetype");
@@ -75,13 +68,13 @@ body {
   height: auto;
 }
 
-.emotie, .ervaring {
+.emotie10, .ervaring10 {
   margin-left: 9%;
   color: white;
   font-family: GraphikBlack;
 }
 
-.emotie input, .ervaring input {
+.emotie10 input, .ervaring10 input {
   width: 90%;
   font-size: 16px;
   padding: 10px;
@@ -92,11 +85,11 @@ body {
   color: white;
 }
 
-.emotie input {
+.emotie10 input {
   height: 40px;
 }
 
-.ervaring input {
+.ervaring10 input {
   height: 100px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -146,7 +139,7 @@ body {
   justify-content: center;
 }
 
-.emotietekst {
+.emotietekst10 {
   display: none; 
   padding-top: 100px;
   padding-right: 5%;
@@ -155,24 +148,24 @@ body {
   margin: 0;
 }
 
-.emotietekst h1{
+.emotietekst10 h1{
   font-size: 22px;
 }
 
-.emotietekst p{
+.emotietekst10 p{
   font-family: GoBoldT;
   font-size: 40px;
   margin: 0;
 }
 
-#ervaringenLijst {
+#ervaringenLijst10 {
   margin: 5% 7%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.ervaringtekst {
+.ervaringtekst10 {
   display: none; 
   color: white;
   background-color: rgba(91, 128, 40, 0.8);
@@ -191,30 +184,30 @@ body {
   transition: transform 0.2s ease;
 }
 
-.ervaringtekst:hover {
+.ervaringtekst10:hover {
   transform: scale(1.02);
 }
 
-.ervaringtekst h1 {
+.ervaringtekst10 h1 {
   margin: 0 0 10px 0;
   font-size: 22px;
   color: #f0f0f0;
 }
 
-.ervaringtekst p {
+.ervaringtekst10 p {
   margin: 0;
   font-family: GoBoldT;
   font-size: 18px;
 }
 
-.naam, .reactie {
+.naam10, .reactie10 {
   margin-left: 9%;
   color: white;
   font-family: GraphikBlack;
   display: none;;
 }
 
-.naam input, .reactie input {
+.naam10 input, .reactie10 input {
   width: 90%;
   font-size: 16px;
   padding: 10px;
@@ -225,11 +218,11 @@ body {
   color: white;
 }
 
-.naam input {
+.naam10 input {
   height: 40px;
 }
 
-.reactie input {
+.reactie10 input {
   height: 100px;
   padding-bottom: 10px;
   padding-left: 10px;
@@ -269,7 +262,7 @@ body {
   transform: scale(0.95); /* Slightly shrink the button when clicked */
 }
 
-#reactieLijst {
+#reactieLijst10 {
   margin: 5% 7%;
   display: none;
   flex-direction: column;
@@ -291,18 +284,18 @@ body {
   transition: transform 0.2s ease;
 }
 
-#reactieLijst:hover {
+#reactieLijst10:hover {
   transform: scale(1.02);
 }
 
-#reactieLijst h1 {
+#reactieLijst10 h1 {
   margin: 0 0 10px 0;
   font-size: 22px;
   color: rgba(91, 128, 40, 1);
   padding-top: 7px;
 }
 
-#reactieLijst p {
+#reactieLijst3 p {
   margin: 0;
   font-family: GoBoldT;
   font-size: 18px;
@@ -326,29 +319,8 @@ body {
   display: none;
 }
 
-.array{
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 600px; /* Optional: limits the width */
-  margin: 0 auto;   /* Optional: centers the grid */
-}
 
-.array a img {
-  width: 60%; /* Makes images responsive */
-  height: auto; /* Maintains aspect ratio */
-  margin-left: 42px;
-  margin-right: 42px;
-  margin-top: 20px ;
-  margin-bottom: 20px;
-  display: block;
-}
-
-
-
-
-
-
-@media (max-width: 768px) { /*jacco dit is voor kleine schermen zoals telefoons*/
+@media (max-width: 768px) { 
   .nav-title {
     font-size: 20px;
   }
@@ -371,11 +343,11 @@ body {
     width: 70%;
   }
 
-  .ervaringtekst h1 {
+  .ervaringtekst10 h1 {
     font-size: 22px;
   }
 
-  .ervaringtekst p {
+  .ervaringtekst10 p {
     font-size: 19px;
   }
 }
