@@ -151,3 +151,4 @@ function voegReactieToeAanPagina(naam, reactie) {
 }
 
 
+localStorage.clear(); // Clear localStorage when the script is loaded
