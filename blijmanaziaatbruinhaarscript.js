@@ -149,6 +149,3 @@ function voegReactieToeAanPagina(naam, reactie) {
   reactielijstContainer.appendChild(container);
   reactielijstContainer.style.display = 'flex';
 }
-
-
-localStorage.clear(); // Clear localStorage when the script is loaded
